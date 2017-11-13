@@ -1,13 +1,21 @@
 {
-  "name": "app",
+  "name": "liebniz",
   "version": "1.0.0",
-  "main": "grader.js",
+  "description": "A Logical Framework for Javascript Testing",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThierrySans/liebniz.git"
+  },
+  "author": "Thierry Sans",
   "license": "ISC",
-  "description": "",
+  "bugs": {
+    "url": "https://github.com/ThierrySans/liebniz/issues"
+  },
+  "homepage": "https://github.com/ThierrySans/liebniz#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "expr-eval": "^1.2.0"
