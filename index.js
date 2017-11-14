@@ -54,7 +54,7 @@ exports.Suite.prototype.add = function(id, options, fn){
     }else{
         options.dependency = 'true';
     }
-    options.weight = ('weight' in options)? options.weight : 1;
+    options.weight = ('weight' in options)? options.weight : 0;
     self.ids.push(id);
     self.tests[id] = {id, dependency: options.dependency, weight: options.weight, fn};
 }
