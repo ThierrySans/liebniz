@@ -70,15 +70,18 @@ exports.Suite.prototype.run = function(){
         });
         var checkDependency = parsed.evaluate();
         if (!checkDependency){
+            test.executed = false;
             test.passed = false;
             test.reason = 'did not satisfy the dependency';
             return data;
         }else{
             return test.fn(data).then(function(res){
+                test.executed = true;
                 test.passed = true;
                 test.reason = res;
                 return data;
             }).catch(function(err){
+                test.executed = true;
                 test.passed = false;
                 test.reason = err;
                 return data;
